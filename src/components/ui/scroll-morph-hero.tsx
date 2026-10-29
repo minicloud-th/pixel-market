@@ -129,7 +129,7 @@ export default function ScrollMorphHero({ children }: { children?: React.ReactNo
       const circle = { x: Math.cos(crad) * cr, y: Math.sin(crad) * cr, rotation: ca + 90 };
 
       const arcR = Math.min(size.width, size.height * 1.5) * (isMobile ? 1.4 : 1.1);
-      const apexY = size.height * (isMobile ? 0.38 : 0.3);
+      const apexY = size.height * (isMobile ? 0.7 : 0.66);
       const centerY = apexY + arcR - size.height / 2;
       const spread = isMobile ? 100 : 130;
       const step = spread / (total - 1);
@@ -163,7 +163,7 @@ export default function ScrollMorphHero({ children }: { children?: React.ReactNo
             initial={{ opacity: 0, y: 20, filter: "blur(10px)" }}
             animate={phase === "circle" && m < 0.5 ? { opacity: 1 - m * 2, y: 0, filter: "blur(0px)" } : { opacity: 0, filter: "blur(10px)" }}
             transition={{ duration: 1 }}
-            className="text-3xl font-semibold md:text-5xl"
+            className="text-2xl font-semibold md:text-4xl"
           >
             ไอดีเกม. ซอร์สโค้ด. <span className="font-serif font-normal italic text-primary">ครบที่เดียว</span>
           </motion.h1>
