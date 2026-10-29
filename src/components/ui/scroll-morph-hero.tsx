@@ -116,7 +116,7 @@ export default function ScrollMorphHero({ children }: { children?: React.ReactNo
   const total = HERO_IMAGES.length;
   const targets = useMemo(() => {
     return HERO_IMAGES.map((_, i): Target => {
-      if (phase === "scatter") return scatter[i];
+      if (phase === "scatter") return scatter[i]!;
       if (phase === "line") {
         const sp = 74;
         return { x: i * sp - (total * sp) / 2, y: 0, rotation: 0, scale: 1, opacity: 1 };
@@ -186,7 +186,7 @@ export default function ScrollMorphHero({ children }: { children?: React.ReactNo
 
         <div className="relative flex h-full w-full items-center justify-center">
           {HERO_IMAGES.map((src, i) => (
-            <FlipCard key={i} src={src} index={i} target={targets[i]} />
+            <FlipCard key={i} src={src} index={i} target={targets[i]!} />
           ))}
         </div>
       </div>
