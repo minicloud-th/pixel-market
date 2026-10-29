@@ -24,7 +24,7 @@ export const HERO_IMAGES = [
   "https://cdn.21st.dev/assets/mirror/ab/ab5f167fcb763aee7c3247fb8af97875998a7f519a6119da7dadd9cf73ae1a2c.jpg",
   "https://cdn.21st.dev/assets/mirror/57/57d6e450f7068e5f3be04907dcc0815343e67df1dc82f2da0ff1c859afc1f700.jpg",
   "https://cdn.21st.dev/assets/mirror/e4/e491359016d1494074e287dfbb55be068cffc0110017ae2257a5d4cdec193a47.jpg",
-];
+] as const;
 
 const LABELS = ["ROV", "Valorant", "Genshin", "React", "Next.js", "Free Fire", "PUBG", "Laravel", "Roblox", "Unity"];
 const IMG_W = 64;
