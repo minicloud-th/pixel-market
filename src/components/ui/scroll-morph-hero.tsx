@@ -89,7 +89,7 @@ export default function ScrollMorphHero({ children }: { children?: React.ReactNo
   useEffect(() => {
     const el = stageRef.current;
     if (!el) return;
-    const ro = new ResizeObserver(([e]) => setSize({ width: e.contentRect.width, height: e.contentRect.height }));
+    const ro = new ResizeObserver(([e]) => e && setSize({ width: e.contentRect.width, height: e.contentRect.height }));
     ro.observe(el);
     return () => ro.disconnect();
   }, []);
